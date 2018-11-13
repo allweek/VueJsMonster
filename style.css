@@ -1,0 +1,112 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background: url("bg.jpg") no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+#app {
+    font-size: 0;
+    padding-top: 20px;
+}
+
+.selfInfo, .monsterInfo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+.selfInfo h2, .monsterInfo h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+.selfInfo p, .monsterInfo p {
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+.filling {
+    background: green;
+    height: 30px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.indicator {
+    margin: 30px;
+    padding: 0;
+    border: 1px solid black;
+    background: lightgrey;
+}
+
+p {
+    font-size: 24px;
+    text-align: center;
+}
+.gameResult {
+    font-weight: bold;
+    margin: 20px auto;
+    font-size: 54px;
+    color: blue;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buttons-wrap {
+    text-align: center;
+    margin: 20px auto;
+}
+.buttons-wrap button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.logs {
+    font-size: 20px;
+    text-align: center;
+}
+.logs ul li {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.self-log {
+    background: #00cf00;
+}
+.monster-log {
+    background: indianred;
+}
+.heal-log {
+    background: #949400;
+}

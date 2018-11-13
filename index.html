@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monster</title>
+    <script src="vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="selfInfo">
+            <h2>You</h2>
+            <div class="indicator">
+                <div class="filling" :style="{width: selfHealth + '%'}"></div>
+            </div>
+            <p v-if="selfHealth > 0">{{ selfHealth }}</p>
+            <p v-else>0</p>
+        </div>
+        <div class="monsterInfo">
+            <h2>Monster</h2>
+            <div class="indicator">
+                <div class="filling" :style="{width: monsterHealth + '%'}"></div>
+            </div>
+            <p v-if="monsterHealth > 0">{{ monsterHealth }}</p>
+            <p v-else>0</p>
+        </div>
+        <div class="buttons-wrap">
+            <template v-if="!isGameEnd">
+                <button @click="attack">Attack</button>
+                <button @click="heal">Heal</button>
+                <button @click="leave">Leave</button>
+            </template>
+            <template v-else>
+                <button @click="again">Again?</button>
+                <p class="gameResult">{{gameResult}}</p>
+            </template>
+        </div>
+        <div class="logs">
+            <ul class="logs-list">
+                <!--<li v-for="log in logs" :style="{backgroundColor: 'green'}">damage given to Monster {{ log }}</li>-->
+                <!--<li v-for="monsterLog in monsterLogs" :style="{backgroundColor: 'red'}">damage taken from Monster {{ monsterLog }}</li>-->
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
